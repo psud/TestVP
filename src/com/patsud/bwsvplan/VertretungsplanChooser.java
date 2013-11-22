@@ -4,14 +4,17 @@ import java.io.File;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -49,12 +52,11 @@ public class VertretungsplanChooser extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		switch (v.getId()){
 		case R.id.chooserVpNew:
-			
-			open("/sdcard/Download/Vertretungsplan_2013-11-19_11-26 (1).pdf");
+			open("/sdcard/Download/Vertretungsplan_Neu.pdf");
 			//Download();
 			break;
 		case R.id.chooserVpOld:
-			open("/sdcard/Download/Vertretungsplan_2013-11-18_11-25 (1).pdf");
+			open("/sdcard/Download/Vertretungsplan_Alt.pdf");
 			break;
 		case R.id.chooserVpKlausurPlan:
 			open("/sdcard/Download/klausurplan2013.pdf");
@@ -62,21 +64,10 @@ public class VertretungsplanChooser extends Activity implements OnClickListener{
 		}
 	}
 
-	private void Loading() {
-		// TODO Auto-generated method stub
-		ProgressDialog dialog = ProgressDialog.show(this, "Loading", "");
-		open("/sdcard/Download/Vertretungsplan_2013-11-15_11-22.pdf");
-	}
+
 	
 	
-	private void Download() {
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://dl.dropboxusercontent.com/s/qbayoe0cdrp95vo/Vertretungsplan_2013-11-19_11-26%20%281%29.pdf")));
-			//startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://dl.dropboxusercontent.com/s/giqs6a22p5gixjy/klausurplan2013.pdf")));
-			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://dl.dropboxusercontent.com/s/nejudcynar4ou8c/Vertretungsplan_2013-11-18_11-25%20%281%29.pdf")));
 	
-			//https://dl.dropboxusercontent.com/s/nejudcynar4ou8c/Vertretungsplan_2013-11-18_11-25%20%281%29.pdf?dl=1&token_hash=AAG6WqYJpkHJuVcZ1YbDD_FvlF0BUjU6D8KaLnpg3fxQFA}
-	
-	}
 	protected void open(String fileStr) {
 		// TODO Auto-generated method stub
 		Log.d("DEBUG", "Got to 1");
@@ -104,5 +95,59 @@ public class VertretungsplanChooser extends Activity implements OnClickListener{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	@SuppressWarnings("deprecation")
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.menuAbout:
+	        	AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+	        	alertDialog.setTitle("Über Uns");
+				alertDialog.setMessage("Diese App wurde entwickelt, um das Anzeigen " +
+						"des Vertretungs- und Klausurenplan" +
+						"der BWS zu erleichtern. " +
+						"\n" +
+						"Für die Anzeige beider Pläne wird ein PDF-Reader benötigt." +
+						"\n\n" +
+						"Entwickler-Team:\n" +
+						"Patrick Sudhaus\n" +
+						"Elias Herrmann\n" +
+						"Philipp Claßen\n" +
+						"Felix Krauspe\n" +
+						"Marcel Hermann\n" +
+						"Jonas Hohmann\n" +
+						"Markus Kalusche\n" +
+						"Stephan Schiefer\n" +
+						"Sebastian Kern" +
+						"\n\n" +
+						"Special Thanks: " +
+						"\n" +
+						"Nick Godzieba");
+
+				alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {	}
+				});
+				alertDialog.show();
+	            break;
+	        case R.id.menuEinstellungen:
+	        	Intent openPrefs = new Intent(this, Einstellungen.class);
+				startActivity(openPrefs);
+
+	            break;
+	        case R.id.menuFeedback:
+	        	Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                String emailAdress[]={"app@patsud.com"};
+                emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, emailAdress);
+                emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback BWS VPlan");
+                emailIntent.setType("plain/text");
+                startActivity(emailIntent);
+	        	break;
+	        
+	       // default:
+	         //   return super.onOptionsItemSelected(item);
+	    }
+		return false;
 	}
 }

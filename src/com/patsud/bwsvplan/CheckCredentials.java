@@ -29,7 +29,7 @@ public class CheckCredentials {
 					public void OnNetworkRequestFinished(CookieStore CStore,
 							String Result) {
 
-						
+						 
 						// TODO Auto-generated method stub
 						//Log.d("DEBUG", "Finished Network Request");
 						//Log.d("DEBUG", CStore.toString());

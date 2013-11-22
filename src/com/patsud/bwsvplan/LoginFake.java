@@ -35,7 +35,7 @@ public class LoginFake extends Activity {
 		Initialize();
 		final CheckCredentials checkCred = new CheckCredentials();
 		final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-		final Intent openCircle = new Intent(this, VertretungsplanChooser.class);
+		final Intent openVpChooser = new Intent(this, VertretungsplanChooser.class);
 		
 
 		showCred.setOnClickListener(new View.OnClickListener() {
@@ -54,14 +54,15 @@ public class LoginFake extends Activity {
 				// TODO Auto-generated method stub
 
 				
-				boolean correctCreds = checkCred.CheckCredentials(username.getText()
-						.toString(), password.getText().toString());
+			//	boolean correctCreds = checkCred.CheckCredentials(username.getText()
+				//		.toString(), password.getText().toString());
 
-				String cookie;
-				if (correctCreds){
-					startActivity(openCircle);
+				//String cookie;
+			//if(true){
+				//if (correctCreds){
+					startActivity(openVpChooser);
 					overridePendingTransition(R.anim.animtransitionout, R.anim.animtransitionup);
-			}
+			//}
 					
 				//	Download(cookie);
 				//if (correctCreds) {
@@ -85,14 +86,13 @@ public class LoginFake extends Activity {
 						"gib hier deine Moodle Login-Daten (Username, Password) ein." +
 						"\n\n" +
 						"Der Start des Programmes kann einige Sekunden dauern, " +
-						"da die PDF-Dateien direkt runtergeladen werden.");
+						"da die PDF-Dateien direkt runtergeladen werden." +
+						"\n\n" +
+						"Bei Problemen oder Fragen könnt ihr mir eine Mail an app@patsud.com schicken.");
 
 				alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-				// here you can add functions
-				}
+				public void onClick(DialogInterface dialog, int which) {	}
 				});
-				//alertDialog.setIcon(R.drawable.vplogo2);
 				alertDialog.show();
 			}
 		});
