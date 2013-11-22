@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" 
+    android:background="@drawable/backgroundplain">
+
+    <Button
+        android:id="@+id/chooserVpNew"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:background="@drawable/buttonselect"
+        android:text="Neuer Vertretungsplan"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/viewSpace"
+        android:layout_below="@+id/chooserVpNew"
+        android:layout_height="15dp"
+        android:layout_width="fill_parent"/>
+
+    <Button
+        android:id="@+id/chooserVpOld"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:background="@drawable/buttonselect"
+        android:text="Alter Vertretungsplan"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_below="@+id/viewSpace"
+        android:textSize="18dp" />
+
+  
+   <Button
+       
+        android:id="@+id/chooserVpKlausurPlan"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:background="@drawable/buttonselect"
+        android:text="Klausurplan"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="#ffffff" />
+   
+    <View
+        android:id="@+id/viewSpace"
+        android:layout_below="@+id/chooserVpNew"
+        android:layout_height="15dp"
+        android:layout_width="fill_parent"/>
+   
+
+</RelativeLayout>

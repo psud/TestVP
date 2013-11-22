@@ -9,24 +9,26 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/loginTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
 
-    <WebView
-        android:id="@+id/webView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_toRightOf="@+id/textView1" />
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/chooserVpNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/loginTv"
         android:layout_marginTop="156dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chooserVpNew"
+        android:layout_centerHorizontal="true"
         android:text="Button" />
 
 </RelativeLayout>
