@@ -13,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/vplogo2"
+        android:icon="@drawable/vplogo"
         android:label="VPlan"
         android:theme="@style/AppTheme">
      

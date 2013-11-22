@@ -13,7 +13,7 @@
         android:src="@drawable/vptext"
         android:paddingLeft="20dp"
         android:paddingRight="20dp" 
-        android:paddingBottom="60dp"/>
+        android:paddingBottom="100dp"/>
 
     <LinearLayout
         android:id="@+id/loginCredentialsLayout"
@@ -84,7 +84,7 @@
     <Button
         android:id="@+id/loginShowLogin"
         android:layout_width="fill_parent"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/loginbutton"
 		android:textSize="20dp"

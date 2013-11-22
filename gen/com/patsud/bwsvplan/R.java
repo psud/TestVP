@@ -31,54 +31,33 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int background=0x7f020000;
-        public static final int backgroundplain=0x7f020001;
-        public static final int backgroundtext=0x7f020002;
-        public static final int backgroundtext2=0x7f020003;
-        public static final int buttonselect=0x7f020004;
-        public static final int buttonselectwhite=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int loginbutton=0x7f020007;
-        public static final int loginstart=0x7f020008;
-        public static final int textfieldshape=0x7f020009;
-        public static final int texture=0x7f02000a;
-        public static final int vpbackground=0x7f02000b;
-        public static final int vplogo=0x7f02000c;
-        public static final int vplogo2=0x7f02000d;
-        public static final int vptext=0x7f02000e;
+        public static final int backgroundplain=0x7f020000;
+        public static final int backgroundtext=0x7f020001;
+        public static final int buttonselect=0x7f020002;
+        public static final int buttonselectwhite=0x7f020003;
+        public static final int loginbutton=0x7f020004;
+        public static final int textfieldshape=0x7f020005;
+        public static final int vpbackground=0x7f020006;
+        public static final int vplogo=0x7f020007;
+        public static final int vptext=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f090016;
-        public static final int authAnmelden=0x7f090004;
-        public static final int authInfo=0x7f090005;
-        public static final int authText=0x7f090003;
-        public static final int button1=0x7f090012;
-        public static final int button2=0x7f090002;
-        public static final int chooserVpKlausurPlan=0x7f090015;
-        public static final int chooserVpNew=0x7f090001;
-        public static final int chooserVpOld=0x7f090014;
-        public static final int loginBackground=0x7f09000a;
-        public static final int loginCredentialsInfo=0x7f09000f;
-        public static final int loginCredentialsLayout=0x7f09000b;
-        public static final int loginCredentialsLogin=0x7f09000e;
-        public static final int loginCredentialsPassword=0x7f09000d;
-        public static final int loginCredentialsUsername=0x7f09000c;
-        public static final int loginGo=0x7f090008;
-        public static final int loginPas=0x7f090007;
-        public static final int loginShowLogin=0x7f090010;
-        public static final int loginTv=0x7f090000;
-        public static final int loginUser=0x7f090006;
-        public static final int scrollView1=0x7f090009;
-        public static final int viewSpace=0x7f090013;
-        public static final int webView1=0x7f090011;
+        public static final int action_settings=0x7f09000b;
+        public static final int chooserVpKlausurPlan=0x7f09000a;
+        public static final int chooserVpNew=0x7f090007;
+        public static final int chooserVpOld=0x7f090009;
+        public static final int loginBackground=0x7f090000;
+        public static final int loginCredentialsInfo=0x7f090005;
+        public static final int loginCredentialsLayout=0x7f090001;
+        public static final int loginCredentialsLogin=0x7f090004;
+        public static final int loginCredentialsPassword=0x7f090003;
+        public static final int loginCredentialsUsername=0x7f090002;
+        public static final int loginShowLogin=0x7f090006;
+        public static final int viewSpace=0x7f090008;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int authentication=0x7f030001;
-        public static final int login=0x7f030002;
-        public static final int login_sleek=0x7f030003;
-        public static final int test=0x7f030004;
-        public static final int vertretungsplanchooser=0x7f030005;
+        public static final int login_sleek=0x7f030000;
+        public static final int vertretungsplanchooser=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f080000;

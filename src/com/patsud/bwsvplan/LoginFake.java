@@ -36,11 +36,8 @@ public class LoginFake extends Activity {
 		final CheckCredentials checkCred = new CheckCredentials();
 		final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 		final Intent openCircle = new Intent(this, VertretungsplanChooser.class);
-		/*
-		 * final Bundle bndlanimation = ActivityOptions.makeCustomAnimation(
-		 * getApplicationContext(), R.anim.animtransitionout,
-		 * R.anim.animtransitionup).toBundle();
-		 */
+		
+
 		showCred.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -65,7 +62,7 @@ public class LoginFake extends Activity {
 					startActivity(openCircle);
 					overridePendingTransition(R.anim.animtransitionout, R.anim.animtransitionup);
 			}
-					;
+					
 				//	Download(cookie);
 				//if (correctCreds) {
 				//if (correctCreds){	
@@ -78,6 +75,7 @@ public class LoginFake extends Activity {
 		
 		bInfo.setOnClickListener(new View.OnClickListener() {
 			
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -143,7 +141,6 @@ public class LoginFake extends Activity {
 					R.anim.animfadein);
 			showCred.setVisibility(View.VISIBLE);
 			showCred.startAnimation(animFadeIn);
-
 			Animation animBackgroundDown = AnimationUtils.loadAnimation(this,
 					R.anim.animbackgrounddown);
 			animBackgroundDown.setFillAfter(true);

@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		/*setContentView(R.layout.activity_main);
 		b = (Button) findViewById(R.id.chooserVpNew);
 		b2 = (Button) findViewById(R.id.button2);
 		tv = (TextView) findViewById(R.id.loginTv);
@@ -88,11 +88,11 @@ public class MainActivity extends Activity {
 	protected void download() {
 		// TODO Auto-generated method stub
 		// String fileName = "testpdf.pdf";
-		/*
-		 * String MY_URL =
-		 * "https://dl.dropboxusercontent.com/s/1ahp7sz9bg5g1ju/Vertretungsplan_2013-11-15_11-22.pdf"
-		 * ; startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MY_URL)));
-		 */String fileName = "thenewvp.pdf";
+//		/*
+//		 * String MY_URL =
+//		 * "https://dl.dropboxusercontent.com/s/1ahp7sz9bg5g1ju/Vertretungsplan_2013-11-15_11-22.pdf"
+//		 * ; startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MY_URL)));
+//		 String fileName = "thenewvp.pdf";
 		 Log.d("DEBUG", "GOt to 1");
 		try {
 			Log.d("DEBUG", "GOt to 2");
@@ -127,7 +127,7 @@ public class MainActivity extends Activity {
 		} catch (IOException e) {
 			Log.e("Abhan", "Error: " + e);
 		}
-		Log.i("Abhan", "Check Your File.");
+		Log.i("Abhan", "Check Your File.");*/
 	}
 }
 // Open
