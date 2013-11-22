@@ -106,7 +106,7 @@ public class VertretungsplanChooser extends Activity implements OnClickListener{
 	        	AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 	        	alertDialog.setTitle("Über Uns");
 				alertDialog.setMessage("Diese App wurde entwickelt, um das Anzeigen " +
-						"des Vertretungs- und Klausurenplan" +
+						"des Vertretungs- und Klausurenplan " +
 						"der BWS zu erleichtern. " +
 						"\n" +
 						"Für die Anzeige beider Pläne wird ein PDF-Reader benötigt." +
@@ -124,7 +124,10 @@ public class VertretungsplanChooser extends Activity implements OnClickListener{
 						"\n\n" +
 						"Special Thanks: " +
 						"\n" +
-						"Nick Godzieba");
+						"Nick Godzieba" +
+						"\n\n" +
+						"Bei Problemen oder Fragen könnt ihr mir eine Mail an app@patsud.com schicken." +
+						"");
 
 				alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {	}
